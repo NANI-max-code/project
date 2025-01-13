@@ -1,0 +1,30 @@
+.user-box{
+    color:red;
+}
+.job{
+   border-radius: 10px;
+   background-color: #4CAF50;
+margin: 5px;
+}
+.job-text{
+    color: white;
+    padding: 10px;
+}
+.pquestion{
+    text-align: left;
+    padding: 30px;
+    margin: 30px;
+}
+.boxx{
+    border-radius: 10px;
+    padding: 10px;
+    width: 70vw;
+}
+.ptext{
+    color: black;
+    padding-left: 15px;
+}
+.formm1{
+    padding: 20px;
+    margin: 20px;
+}

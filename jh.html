@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Personality Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            margin-top: 30px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            font-size: 16px;
+            color: #555;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .form-group input[type="file"] {
+            border: none;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        .table-container {
+            margin-top: 40px;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .action-btn {
+            background-color: #f44336;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .action-btn:hover {
+            background-color: #e53935;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Admin Dashboard - Personality Prediction</h1>
+
+    <form action="#" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="cvUpload">Upload CV (PDF only)</label>
+            <input type="file" id="cvUpload" name="cvUpload" accept=".pdf" required>
+        </div>
+
+        <div class="form-group">
+            <label for="aptitudeScore">Aptitude Test Score</label>
+            <input type="number" id="aptitudeScore" name="aptitudeScore" placeholder="Enter score" required>
+        </div>
+
+        <div class="form-group">
+            <label for="personalityType">Select Predicted Personality Type</label>
+            <select id="personalityType" name="personalityType">
+                <option value="Introvert">Introvert</option>
+                <option value="Extrovert">Extrovert</option>
+                <option value="Ambivert">Ambivert</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn">Submit Data</button>
+        </div>
+    </form>
+
+    <!-- Table for viewing collected data -->
+    <div class="table-container">
+        <h2>Predicted Personality Data</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>CV Uploaded</th>
+                    <th>Aptitude Score</th>
+                    <th>Predicted Personality</th>
+                    <th>Date Submitted</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Example row (dynamically populated) -->
+                <tr>
+                    <td>1</td>
+                    <td>CV_JohnDoe.pdf</td>
+                    <td>85</td>
+                    <td>Introvert</td>
+                    <td>2025-01-12</td>
+                    <td>
+                        <a href="#" class="action-btn">Edit</a>
+                        <a href="#" class="action-btn">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>CV_JaneDoe.pdf</td>
+                    <td>90</td>
+                    <td>Extrovert</td>
+                    <td>2025-01-11</td>
+                    <td>
+                        <a href="#" class="action-btn">Edit</a>
+                        <a href="#" class="action-btn">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
