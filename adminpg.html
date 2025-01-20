@@ -198,8 +198,8 @@
             width: 100%;
             padding: 10px 15px;
             font-size: 16px;
-            background-color: #4CAF50;
-            color: white;
+            /* background-color: #4CAF50; */
+            color: black;
             border: none;
             border-radius: 4px;
             cursor: pointer;
@@ -250,6 +250,7 @@
                       <li> <a class="nav-link" href="#" data-toggle="tab" onclick="display_tab('sectionjobdetails')">Add Job Details</a></li>
                       <li><button class="dropdown-item" type="button">Preferred CV's</button></li>
                       <li><button class="dropdown-item" type="button">Requirement details</button></li>
+                      <li><button class="dropdown-item" type="button">Shortlist CV</button></li>
                     </ul>
                   </div>
               </li>
@@ -257,10 +258,7 @@
                 <a class="nav-link " href="#"  data-toggle="tab" onclick="display_tab('sectiondetails')">View Details</a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+           
           </div>
         </div>
     </nav>
@@ -280,8 +278,9 @@
         <h1>Manage Personality Prediction Questions</h1>
     </header>
     
-    <div class="container">
+    <div class="container d-flex flex-row justify-content-between">
         <!-- Form to add new question -->
+        <div d-flex flex-column>
         <h2>Add a New Question</h2>
         <form action="#" method="POST">
             <div class="form-group">
@@ -294,11 +293,19 @@
                         <option value="java">Programming</option>
                     
                     </select>
-                    <br><br>
-                </form>
+                    <p style="font-weight:bold;">Select aptitude or personality type questions:</p>
+                    <div d-flex flex-row justify-content-between>
+                    <input type="radio" id="leader" name="leadership_preference" value="leader">
+                    <label for="leader">Aptitude:</label><br>
+                    <input type="radio" id="independent" name="leadership_preference" value="independent">
+                    <label for="independent">Personality based:</label><br><br>
+                    <button type="submit">Submit</button>
+                </form></div>
+            </div>
                 <label for="questionText">Enter Question</label>
-                <textarea id="questionText" name="questionText" rows="2" required></textarea>
-                <div class="question-container">
+                <input type="text" style="width:100%;" name="language" placeholder="">
+                <!-- <textarea id="questionText" name="questionText" rows="2" required></textarea> -->
+                <div class="question-container ">
                 <form>
                     <div class="options">
                       
@@ -326,7 +333,9 @@
             </div>
         </form>
     </div>
-        <!-- <h2>Existing Questions</h2>
+    <div d-flex flex-column>
+
+        <h2>Existing Questions</h2>
         <table class="questions-table">
             <thead>
                 <tr>
@@ -351,17 +360,19 @@
                         <a href="#" class="action-btn edit">Edit</a>
                         <a href="#" class="action-btn delete">Delete</a>
                     </td>
-                </tr> -->
-            <!-- </tbody>
-        </table> -->
+                </tr>
+            </tbody>
+        </table>
     </div>
-    
+</div>
 </div>
 <div class="hidetab d-none " id="sectionpquestions" >
     <div class="pquestion" d-flex flex-row justify-content-center>
-        <label for="questionText" class="ptext">Enter Question :</label>
-        <textarea class="boxx" id="questionText" name="questionText" rows="2" required></textarea>
 
+
+        <label for="questionText" style="text-align:center;" class="ptext">Enter Question :</label>
+        <input type="text" class="spa" style="width:50%;" name="language" placeholder="">
+        
         <div class="form-group">
             <form>
                 <label for="languages">Openness to experience:</label>
@@ -442,25 +453,24 @@
         <h1 class="job-text">Requirement details</h1>
     </div>
     <form >
-        <label for="languages">Job ID:</label>
-        <!-- <select id="languages" name="languages"> -->
-      <textarea rows="1"></textarea>
-         
-        
-        <!-- </select> -->
+        <label>
+            <label for="languages">Job ID:</label>
+            <input type="text" style="width:100%;" name="language" placeholder="">
+        </label>
         <br><br>
-    <form >
-        <label for="languages">Designation:</label>
-        <textarea rows="1"></textarea>
-        <br><br>
-        <form >
-            <label for="languages">Salary:</label>
-            <textarea rows="1"></textarea>
-            <br><br>
-            <form >
+            <label>
+                <label for="languages">Designation:</label>
+                <input type="text" style="width:100%;" name="language" placeholder="">
+            </label>
+            <label>
+                <label for="languages">Salary:</label>
+                <input type="text" style="width:100%;" name="language" placeholder="">
+            </label>
+            <label>
                 <label for="languages">Place:</label>
-                <textarea rows="1"></textarea>
-                <br><br>
+                <input type="text" style="width:100%;" name="language" placeholder="">
+            </label>
+           
                 <div class="form-group">
                     <button type="submit" class="btn">Submit</button>
                 </div>
